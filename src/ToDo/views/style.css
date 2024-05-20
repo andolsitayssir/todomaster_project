@@ -1,0 +1,61 @@
+TextField, PasswordField{
+    -fx-border-color: none;
+    -fx-prompt-text-fill: #8f8e8e;
+    -fx-background-color: rgba(152, 215, 252, 0.3);
+    -fx-text-fill: #363636;
+
+
+}
+.text-field:focused ,.password-field:focused{
+    -fx-border-color: rgba(33, 166, 250, 0.3);
+    -fx-border-radius: 0;
+    -fx-border-width: 0 0 3px 0;
+}
+    .table-view .column-header .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+}
+.table-view{
+    -fx-background-color: rgba(252, 199, 205, 0.5);
+}
+.column-header{
+    -fx-background-color:  rgba(159, 220, 239, 0.7);
+
+}
+.table-view .table-cell {
+    -fx-background-color: rgba(252, 199, 205, 0.5);
+    -fx-border-color: transparent;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0, 0, 2);
+}
+
+/* Styling for selected rows */
+.table-view .table-row-cell:filled:selected {
+    -fx-background-color: rgba(236, 165, 121, 0.76);
+   -fx-border-color: rgba(248, 149, 86, 0.76);
+    -fx-border-width: 5px;
+    -fx-font-weight: bold;
+}
+
+/* Increase row height and add spacing */
+.table-view .table-row-cell {
+    -fx-padding: 10px 0 ;
+    -fx-background-insets: 0 0 10px 0;
+    -fx-border-insets: 0 0 10px 0;
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+
+}
+
+
+.date-picker {
+    -fx-background-color: rgba(159, 220, 239, 0.5);
+}
+
+/* CheckBox */
+.check-box {
+    -fx-text-fill: #e3b77a;
+}

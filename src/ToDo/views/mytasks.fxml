@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="tasksPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="897.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ToDo.controllers.taskController">
+    <children>
+        <ImageView fitHeight="597.0" fitWidth="972.0" layoutX="-23.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@cute-abstract-modern-background-free-vector.jpg" />
+            </image>
+        </ImageView>
+        <Button fx:id="addBtn" contentDisplay="CENTER" layoutX="14.0" layoutY="370.0" mnemonicParsing="false" onAction="#addTask" prefHeight="33.0" prefWidth="70.0" style="-fx-background-color: #a5d7e5;" text="Add " textAlignment="JUSTIFY" textFill="#f3efef">
+            <font>
+                <Font name="SansSerif Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="delBtn" layoutX="204.0" layoutY="370.0" mnemonicParsing="false" onAction="#delete" prefHeight="33.0" prefWidth="70.0" style="-fx-background-color: #f66b6b;" stylesheets="@style.css" text="Delete " textAlignment="CENTER" textFill="#f3efef">
+            <font>
+                <Font name="SansSerif Bold" size="14.0" />
+            </font>
+        </Button>
+        <TextField id="desc" fx:id="descrip" alignment="TOP_LEFT" layoutX="14.0" layoutY="100.0" opacity="0.99" prefHeight="43.0" prefWidth="260.0" promptText="Description">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <font>
+                <Font name="SansSerif Regular" size="17.0" />
+            </font>
+        </TextField>
+        <TextField id="details" fx:id="details" alignment="TOP_LEFT" layoutX="14.0" layoutY="156.0" prefHeight="161.0" prefWidth="260.0" promptText="Details">
+            <font>
+                <Font name="SansSerif Regular" size="17.0" />
+            </font>
+        </TextField>
+        <DatePicker id="date" fx:id="datePick" layoutX="149.0" layoutY="329.0" prefHeight="26.0" prefWidth="125.0" promptText="yyyy/mm/dd" stylesheets="@style.css" />
+        <CheckBox id="impo" fx:id="impocheck" layoutX="14.0" layoutY="335.0" mnemonicParsing="false" stylesheets="@style.css" text="Important" textFill="#e3b77a">
+            <font>
+                <Font name="SansSerif Regular" size="11.686956405639648" />
+            </font>
+        </CheckBox>
+        <Text id="title" fx:id="title" fill="#a67b7b" layoutX="352.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Tasks" textAlignment="CENTER">
+            <font>
+                <Font name="SansSerif Bold" size="43.0" />
+            </font>
+        </Text>
+        <Button fx:id="updateBtn" contentDisplay="CENTER" layoutX="109.0" layoutY="370.0" mnemonicParsing="false" onAction="#update" prefHeight="33.0" prefWidth="70.0" style="-fx-background-color: #e5b9db;" text="Update" textAlignment="CENTER" textFill="#f3efef">
+            <font>
+                <Font name="SansSerif Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="goBack" layoutX="789.0" layoutY="426.0" mnemonicParsing="false" onAction="#goBack" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #eca579;" stylesheets="@style.css" text="Go Back" textAlignment="CENTER" textFill="#f3efef">
+            <font>
+                <Font name="SansSerif Bold" size="14.0" />
+            </font>
+        </Button>
+        <TableView fx:id="taskTb" layoutX="280.0" layoutY="91.0" prefHeight="327.0" prefWidth="612.0" stylesheets="@style.css">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="41.7391357421875" text="id" />
+                <TableColumn fx:id="dateCol" prefWidth="112.6956787109375" text="Date" />
+                <TableColumn fx:id="descriptionCol" prefWidth="141.91311645507812" text="Description" />
+                <TableColumn fx:id="detailCol" prefWidth="219.54779052734375" text="Details" />
+                <TableColumn fx:id="impCol" prefWidth="97.6695556640625" text="Important" />
+            </columns>
+        </TableView>
+    </children>
+</Pane>
